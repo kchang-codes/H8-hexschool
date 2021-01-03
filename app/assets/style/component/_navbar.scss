@@ -1,0 +1,91 @@
+  // Navbar
+  //
+  .navbar {
+      background-color: $white ;
+      padding: 0;
+  }
+ 
+  // Navbar brand
+  //  
+  .logo {
+    background-image: url(./../../../assets/images/logo.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 121px;
+    height: 55px;
+  }
+  
+  // Navbar-link
+  //
+  .navbar-nav {
+    .nav-link {
+        padding: 12px 0;
+        text-align: center;
+        border-bottom:1px solid  #dedede;
+        font-size: 20px;
+        margin-left: 0px;
+        @include media-breakpoint-up(sm) {
+            font-size: 16px;
+            border-bottom:0px;
+            margin-left: 40px;
+            }
+        }
+    } 
+  
+  // Button for toggling the navbar when in its collapsed state
+  .navbar-toggler {
+    width: 32px;
+    height: 28px;
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    margin:0;
+    transform: rotate(0deg);
+    cursor: pointer;
+    &:hover, &:focus {
+        outline: none;
+    }
+    .navbar-toggler-icon {
+        display: block;
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        background: #F8B52E;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        &:nth-child(1) {
+            top: 0px;
+            transform-origin: left center;
+          }
+          &:nth-child(2) {
+            top: 10px;
+            transform-origin: left center;
+          }
+          &:nth-child(3) {
+            top:20px;
+            transform-origin: left center;
+          }
+        }
+        &.open .navbar-toggler-icon {
+            &:nth-child(1) {
+            transform: rotate(45deg);
+            top: 0px;
+            left: 4px;
+            }
+            &:nth-child(2) {
+            width: 0%;
+            opacity: 0;
+            }
+            &:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 21px;
+            left: 4px;
+            }
+        }
+  }
+
+
